@@ -12,7 +12,7 @@ const links = [
 const Nav = () => {
     return (
         <nav className="text-lg font-bold py-2 px-4">
-            <ul className="list-none flex flex-col justify-around gap-2 overflow-scroll">
+            <ul className="list-none flex flex-col justify-around gap-2">
                 {links.map(link =>
                     <li 
                         key={link.href} 

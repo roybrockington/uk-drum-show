@@ -13,7 +13,7 @@ const Header = () => {
                 <Image src='/tukds.png' alt='The UK Drum Show 2025' width={150} height={10} />
                 <button 
                     type="button" 
-                    className={`z-50 border inline-flex items-center p-2 w-10 h-10 justify-center text-sm ${nav ? 'text-black' : 'text-gray-500'} rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600`} 
+                    className={`z-50 border inline-flex items-center p-2 w-10 h-10 justify-center text-sm ${nav ? 'text-black' : 'text-gray-500'} rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600`} 
                     aria-controls="navbar-default" 
                     aria-expanded="false"
                     onClick={() => setNav(!nav)}
@@ -25,7 +25,7 @@ const Header = () => {
                 </button>
             </nav>
             <div 
-                className={`${nav ? 'block' : 'hidden'} absolute top-0 left-0 w-screen min-h-screen flex items-center justify-center bg-pink-700 z-10`}
+                className={`${nav ? 'fixed' : 'hidden'} absolute top-0 left-0 w-screen min-h-screen flex items-center justify-center bg-pink-700 z-10`}
                 onClick={() => setNav(!nav)}
             >
                 <Nav />
