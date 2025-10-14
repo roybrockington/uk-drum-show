@@ -13,13 +13,13 @@ const Nav = () => {
     return (
         <nav className="text-lg font-bold py-2 px-4">
             <ul className="list-none flex flex-col justify-around gap-2 overflow-scroll">
-                {links.map((link, index) =>
+                {links.map(link =>
                     <li 
                         key={link.href} 
                         className="w-full bg-black px-8 py-4 border-black rounded"
                     >
                         <Link href={link.href}>
-                            <Image src={`/${link.label}.jpg`} alt={link.label} width={200} height={20} className="invert-100"/>
+                            <Image src={`/${link.label}.jpg`} alt={link.label} width={200} height={20} className="invert-100" />
                         </Link>
                     </li>
                 )}

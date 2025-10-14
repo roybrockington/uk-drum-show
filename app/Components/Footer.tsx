@@ -1,7 +1,7 @@
 const Footer = (props : {}) => {
     return (
-            <footer className="mt-auto w-full flex gap-[24px] flex-wrap items-center justify-center bg-sky-600 text-white">
-                footeroooo
+            <footer className="mt-auto w-full flex flex-wrap items-center justify-center bg-pink-700 text-white py-7">
+                Copyright &copy; 2025 Sound Service GmbH
             </footer>
     )
 }
