@@ -2,7 +2,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const DealGrid = ({deals}) => {
+
+type Deal = {
+    img: string
+    name: string
+    link: string
+    ukds: number
+    ssp: number
+    code: number
+}
+
+const DealGrid = ({deals}: {deals: Deal[]}) => {
   return (
   <div className='px-7 flex flex-col gap-8 mb-8'>
                 {deals.map((deal) => 
