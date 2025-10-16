@@ -1,28 +1,27 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
 
-const links = [
-    {href: '/audix', label: 'Audix'},
-    {href: '/dixon', label: 'Dixon'},
-    {href: '/rogers', label: 'Rogers'},
-    {href: '/masterwork', label: 'Masterwork'},
-    {href: '/zoom', label: 'Zoom'},
-];
+type NavProps = {
+  tab: boolean;
+  setTab: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-const Nav = () => {
+const Nav = ({tab, setTab}: NavProps) => {
+
     return (
         <nav className="text-lg font-bold py-2 px-4">
-            <ul className="list-none flex flex-col justify-around gap-2">
-                {links.map(link =>
-                    <li 
-                        key={link.href} 
-                        className="w-full bg-black px-8 py-4 border-black rounded"
-                    >
-                        <Link href={link.href}>
-                            <Image src={`/${link.label}.jpg`} alt={link.label} width={200} height={20} className="invert-100" />
-                        </Link>
-                    </li>
-                )}
+            <ul className="list-none flex justify-around gap-3">
+        <li 
+            className={`${tab ? 'bg-black' : ''} border-black border rounded-xl px-3 py-1`}
+            onClick={() => setTab(!tab)}
+        >
+            <Image src='/Audix.jpg' alt='Audix' width={110} height={20} className={tab ? "invert-100" : ""} />
+        </li>
+        <li 
+            className={`${!tab ? 'bg-black' : ''} border-black border rounded-xl px-3 py-1`}
+            onClick={() => setTab(!tab)}
+        >
+            <Image src='/Zoom.jpg' alt='Audix' width={110} height={20} className={!tab ? "invert-100" : ""} />
+        </li>
             </ul>
         </nav>
     )
